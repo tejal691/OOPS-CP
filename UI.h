@@ -118,13 +118,11 @@ public:
         return -1;
     }
 
-    // ---------- animated colourful background ----------
-    void background(float t)
+    // ---------- calm STATIC background (no movement, no bubbles) ----------
+    void background(float)
     {
-        sf::Color top = rgba(90 + 60 * sin(t * 0.3f), 40 + 30 * sin(t * 0.4f + 2),
-                             160 + 60 * sin(t * 0.2f + 4));
-        sf::Color bottom = rgba(20 + 20 * sin(t * 0.25f + 1), 120 + 70 * sin(t * 0.35f),
-                                190 + 50 * sin(t * 0.3f + 3));
+        sf::Color top = rgba(35, 55, 125);       // deep blue
+        sf::Color bottom = rgba(95, 55, 150);    // soft purple
 
         sf::VertexArray bg(sf::PrimitiveType::TriangleStrip, 4);
         bg[0].position = {0, 0};   bg[0].color = top;
@@ -132,22 +130,6 @@ public:
         bg[2].position = {0, 700}; bg[2].color = bottom;
         bg[3].position = {W, 700}; bg[3].color = bottom;
         window.draw(bg);
-
-        // floating bubbles
-        sf::Color col[5] = {rgba(255, 99, 160, 55), rgba(255, 200, 80, 50),
-                            rgba(90, 255, 200, 45), rgba(120, 160, 255, 55),
-                            rgba(255, 140, 90, 50)};
-
-        for(int i = 0; i < 14; i++)
-        {
-            float r = 18.f + (i * 13) % 46;
-            sf::CircleShape b(r);
-            b.setOrigin({r, r});
-            b.setPosition({40.f + (i * 71) % 920 + 25 * sin(t * 0.5f + i),
-                           780.f - fmod(t * (14.f + (i % 5) * 8) + i * 97.f, 880.f)});
-            b.setFillColor(col[i % 5]);
-            window.draw(b);
-        }
     }
 
     // ---------- rainbow title ----------
