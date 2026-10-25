@@ -158,10 +158,3 @@ Then run:
 - Sound effects and themes
 - Option to load custom passages from within the app
 
----
-
-## Author
-
-- **Name:** _your name_
-- **Course / College:** _your course and college_
-- **Year:** 2026
