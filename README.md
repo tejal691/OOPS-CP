@@ -8,11 +8,7 @@ The project is also a demonstration of **Object-Oriented Programming** concepts:
 
 ## Screenshot
 
-> Add your screenshot here, for example:
->
-> `![TypeMaster Screenshot](Screenshot_2026-10-04_144444.png)`
-
----
+<img width="1013" height="732" alt="image" src="https://github.com/user-attachments/assets/7a91db4f-c89e-4ed9-b724-15a6025a6955" />
 
 ## Features
 
